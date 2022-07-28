@@ -1,5 +1,14 @@
 # SM3-openSSL
 SM3 from openssl
+
+
+# openssl简介
+openssl是一个安全套接字层密码库，囊括主要的密码算法、常用密钥、证书封装管理功能及实现ssl协议。OpenSSL整个软件包大概可以分成三个主要的功能部分：SSL协议库libssl、应用程序命令工具以及密码算法库libcrypto。
+
+
+
+# 实现简介
+
 openssl中，有关SM3的实现是套用了Hash函数的模板，即MD结构的函数，使用宏函数来减少函数调用。
 
 其中有关SM3的个性函数都在sm3local.h中给了声明，尤其是SM3中，对于CF函数的各种小操作，都定义成了宏函数。
